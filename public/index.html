@@ -10,12 +10,35 @@
     <center>
     <h1>Servicios</h1>
     <form action="javascript:saludaHttp();">
-      <p><input type="text" id="nombre" placeholder="nombre"></p>
-      <p><input type="text" id="apellido" placeholder="apellido"></p>
-      <p><input type="text" id="correo" placeholder="correo"></p>
-      <p>
-        <button type="submit">Capturar datos</button>
-      </p>
+      <center>
+          
+      </center>
+    <center>
+      <table border="1">
+        
+          <tr>
+              <th colspan="2">Tipo de bebida</th>
+          </tr>
+          <tr>
+              <td>Ingresa el tipo de bebida:
+                      <select name="bebidas" id="bebidas">
+                          <!-- Opciones de la lista -->
+                          <option value="1">Cola</option>
+                          <option value="2">Alcohol</option>
+                          <option value="3">Dulce natural</option>
+                          <option value="4">Refrescos de sabor</option>
+                        </select>
+                        <td>Ingrese su edad: 
+          <input type="number" name="numero" value="15" min="10"
+                          max="100" id="edad"/>
+                          
+              
+          </tr>
+       
+      </table>
+  <td><input type="submit" value="Enviar">
+    </center>
+    
       <footer>Copyright &copy; 2020 Fernando García.</footer>
     </form>
   </center>
@@ -47,15 +70,12 @@
            * de la operación y toma la respuesta devuelta por el servidor.
            * @type {Response} */
           const respuestaHttp =
-            await fetch("saludo?nombre="
+            await fetch("saludo?bebidas="
               // @ts-ignore
               
-              + encodeURIComponent(nombre.value.trim())
+              + encodeURIComponent(bebidas.value.trim())
               // @ts-ignore
-              + "&apellido=" + encodeURIComponent(apellido.value.trim())
-              
-              // @ts-ignore
-              + "&correo=" + encodeURIComponent(correo.value.trim()));
+              + "&edad=" + encodeURIComponent(edad.value.trim())));
           /* La property ok de la respuesta vale true si la conexión terminó
            * con éxito. */
           if (respuestaHttp.ok) {

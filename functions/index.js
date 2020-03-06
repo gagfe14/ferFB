@@ -3,7 +3,7 @@
 const functions = require('firebase-functions');
 
 /* Se exporta la función sobre https llamada "reco". */
-exports.reco = functions.https.onRequest(
+exports.saludo = functions.https.onRequest(
   /** Código para la función saludo.
    * @param {{query:Object}} request solicitud que recibe el servidor.
    * Corresponde a la librería Express.

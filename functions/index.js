@@ -23,11 +23,11 @@ exports.saludo = functions.https.onRequest(
       /* Solo se llega a esta parte si nombre1 y nombre 2 tienen un texto.
        * Devuelve un saludo. */
 
-      if (request.query.bebidas == "1" && request.query.edad >= 5 && request.query.edad < 60) {
+      if (request.query.bebidas == 1 && request.query.edad >= 5 && request.query.edad < 60) {
         alert("Te recomiendo Coca cola o Red cola");
       } 
 
-      else if (request.query.bebidas == "2"){
+      else if (request.query.bebidas == 2){
         if(request.query.edad >= 18){
           alert("Te recomiendo cerveza, vodka, tequila, ron, whisky, pulque");
         }
@@ -36,11 +36,11 @@ exports.saludo = functions.https.onRequest(
         }
           } 
 
-      else if (request.query.bebidas == "3" && request.query.edad >= 6 && request.query.edad < 70) {
+      else if (request.query.bebidas == 3 && request.query.edad >= 6 && request.query.edad < 70) {
               alert("Te recomiendo agua de horchata, avena, tamarindo, melón o limón");
         
           } 
-      else if (request.query.bebidas == "4" && request.query.edad >= 6 && request.query.edad < 70) {
+      else if (request.query.bebidas == 4 && request.query.edad >= 6 && request.query.edad < 70) {
               alert("Te recomiendo Fanta, squirt, sidral mundet");
 
         }

@@ -10,9 +10,9 @@
     <center>
     <h1>Servicios</h1>
     <form action="javascript:saludaHttp();">
-      <p><input type="text" id="nombre" placeholder="Nombre"></p>
-      <p><input type="text" id="apellido" placeholder="Apellido"></p>
-      <p><input type="text" id="correo" placeholder="Correo"></p>
+      <p><input type="text" id="nombre" placeholder="nombre"></p>
+      <p><input type="text" id="apellido" placeholder="apellido"></p>
+      <p><input type="text" id="correo" placeholder="correo"></p>
       <p>
         <button type="submit">Capturar datos</button>
       </p>
@@ -49,6 +49,7 @@
           const respuestaHttp =
             await fetch("saludo?nombre="
               // @ts-ignore
+              
               + encodeURIComponent(nombre.value.trim())
               // @ts-ignore
               + "&apellido=" + encodeURIComponent(apellido.value.trim())

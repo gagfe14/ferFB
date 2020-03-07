@@ -8,7 +8,7 @@
   </head>
   <body id="cuerpo">
     <h1>Servicios</h1>
-    <form action="javascript:saludaHttp();">
+    <form action="javascript:recomendar();">
       <table>
           <tr>
               <th colspan="2">Tipo de bebida</th>
@@ -45,7 +45,7 @@
        * función termina correctamente o con error en algún momento futuro.
        * @returns {Promise} para indicar cuando termina correctamente o con
        *  error. */
-      async function saludaHttp() {
+      async function recomendar() {
         try {
           /** La función fetch envía los datos al servidor. El texto que recibe
            * como parámetro es la url que se invoca. El signo de interrogación
@@ -62,7 +62,7 @@
            * de la operación y toma la respuesta devuelta por el servidor.
            * @type {Response} */
           const respuestaHttp =
-            await fetch("saludo?bebidas="
+            await fetch("recomendar?bebidas="
               // @ts-ignore
               
               + encodeURIComponent(bebidas.value.trim())

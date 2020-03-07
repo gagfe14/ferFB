@@ -2,8 +2,8 @@
 /** Se importa el objeto functions de la librería "firebase-functions". */
 const functions = require('firebase-functions');
 
-/* Se exporta la función sobre https llamada "reco". */
-exports.saludo = functions.https.onRequest(
+/* Se exporta la función sobre https llamada "recomendar". */
+exports.recomendar = functions.https.onRequest(
   /** Código para la función saludo.
    * @param {{query:Object}} request solicitud que recibe el servidor.
    * Corresponde a la librería Express.

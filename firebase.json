@@ -27,8 +27,8 @@
     ],
     "rewrites": [
       {
-        "source": "/saludo",
-        "function": "saludo"
+        "source": "/recomendar",
+        "function": "recomendar"
       }
     ]
   },

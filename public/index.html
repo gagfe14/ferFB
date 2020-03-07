@@ -7,16 +7,9 @@
     <link rel="stylesheet" href="misestilos.css">
   </head>
   <body id="cuerpo">
-    <center>
     <h1>Servicios</h1>
     <form action="javascript:saludaHttp();">
-    </center>
-      <center>
-          
-      </center>
-    <center>
-      <table border="1">
-        
+      <table>
           <tr>
               <th colspan="2">Tipo de bebida</th>
           </tr>
@@ -38,11 +31,9 @@
        
       </table>
     <button type="submit"> ENVIAR </button>
-    </center>
-    
-      <footer>Copyright &copy; 2020 Fernando García.</footer>
     </form>
-  </center>
+  
+    <footer>Copyright &copy; 2020 Fernando García.</footer>
     <script>
       //@ts-check
 
@@ -76,7 +67,7 @@
               
               + encodeURIComponent(bebidas.value.trim())
               // @ts-ignore
-              + "&edad=" + encodeURIComponent(edad.value.trim())));
+              + "&edad=" + encodeURIComponent(edad.value.trim()));
           /* La property ok de la respuesta vale true si la conexión terminó
            * con éxito. */
           if (respuestaHttp.ok) {
